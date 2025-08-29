@@ -8,11 +8,11 @@
 
 @theme {
   /* Font Family */
-  --font-primary: var(--font-roboto);
+  --font-primary: var(--font-sofia);
 
   /* Colors */
-  --color-white: #ffffff;
-  --color-black: #000000;
+  --color-papaya: #ea8c55;
+  --color-paper: #f6eee3;
 }
 
 @layer base {

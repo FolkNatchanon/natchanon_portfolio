@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto } from "next/font/google";
+import {Sofia_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// Components
+import Navbar from "@/components/navbar"
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const RobotoFont = Roboto({
+const SofiaFont = Sofia_Sans({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-roboto"
+  variable: "--font-sofia"
 })
 
 export const metadata: Metadata = {
@@ -31,9 +24,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${RobotoFont.variable}antialiased`}
+      className={`${SofiaFont.variable} antialiased`}
     >
       <body>
+        <Navbar />
         {children}
       </body>
     </html>
