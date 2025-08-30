@@ -11,8 +11,9 @@
   --font-primary: var(--font-sofia);
 
   /* Colors */
-  --color-papaya: #ea8c55;
-  --color-paper: #f6eee3;
+  --color-yellow_cream: #FBF8CC;
+  --color-blue_dark: #03045E;
+  --color-gray_dark: #222222;
 }
 
 @layer base {
@@ -24,6 +25,6 @@
     color: var(--color-black);
 
     /* Visual */
-    background-color: var(--color-white);
+    background-color: var(--color-gray_dark);
   }
 }

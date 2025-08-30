@@ -2,9 +2,11 @@ import Link from "next/link"
 
 const NavBar = () => {
     return (
-        <nav className="flex p-8 w-full fixed justify-between items-center text-[#03045E]">
+        <nav className="flex fixed w-full items-center justify-between backdrop-blur-xs py-5 px-8 bg-black/50 text-white">
+
+
             {/* Left */}
-            <div className="ml-10 text-[32px] font-extrabold">
+            <div className="text-[30px] font-bold">
                 <Link href={"/"}><h1 className="hover:underline cursor-pointer">HOME</h1></Link>
             </div>
 
