@@ -1,12 +1,12 @@
 const HomePage = () => {
   return (
-    <div className="flex flex-col w-screen text-[#088395]">
+    <div id="home" className="flex flex-col w-screen text-[#088395]">
       {/* Title */}
       <div className="flex justify-center item-center h-screen w-screen">
         <div className="flex justify-between item-center gap-40 mt-90">
           {/* Left */}
           <div className="item-center w-full">
-            <div><p className="text-[40px] font-extrabold">Hello, I am</p></div>
+            <div><p className="text-[40px] text-white font-extrabold">Hello, I am</p></div>
             <div className="mt-10"><p className="text-[50px] font-extrabold">Natchanon Srijudanu</p></div>
             <div><p className="text-[20px]">Computer Science student with an interest in Full-Stack Web Development. Eager to gain real-world experience,<br />learn from teamwork, and grow into a professional Full-Stack Developer.</p></div>
           </div>
@@ -21,14 +21,14 @@ const HomePage = () => {
         </div>
       </div>
       {/* Skill and Technology */}
-      <div className="flex w-screen p-20">
+      <div id="skill" className="flex w-screen p-20">
         <div className="w-full">
           {/* Skills Title*/}
           <div className="flex flex-col items-center mt-15">
             <div className="flex gap-4 py-5 items-center">
-              <div className="border-b-[2px] w-[300px]"></div>
-              <span className="flex-shrink mx-4 text-[50px] font-extrabold ">Skill and Technology</span>
-              <div className="border-b-[2px] w-[300px]"></div>
+              <div className="border-b-[2px] w-[300px] text-white"></div>
+              <span className="flex-shrink mx-4 text-[50px] font-extrabold text-white">Skill and Technology</span>
+              <div className="border-b-[2px] w-[300px] text-white"></div>
             </div>
           </div>
           {/* Programming Language */}
@@ -36,7 +36,7 @@ const HomePage = () => {
             <div>
               <p className="text-[38px] font-extrabold">Programming Language</p>
             </div>
-            <div className="flex items-center gap-20 mt-10 text-[20px] font-bold">
+            <div className="flex items-center gap-20 mt-10 text-[20px] font-bold ">
               <div className="border-2 rounded-[10] p-3"><p>Python</p></div>
               <div className="border-2 rounded-[10] p-3"><p>Java</p></div>
               <div className="border-2 rounded-[10] p-3"><p>JavaScript</p></div>

@@ -7,14 +7,14 @@ const NavBar = () => {
 
             {/* Left */}
             <div className="text-[30px] font-bold">
-                <Link href={"/"}><h1 className="hover:underline cursor-pointer">HOME</h1></Link>
+                <Link href={"/#home"}><h1 className="hover:underline cursor-pointer">HOME</h1></Link>
             </div>
 
             {/* Right */}
             <div className="flex items-center gap-[30px] text-[20px]">
                 <Link href={"/about"}><p className="hover:underline cursor-pointer">ABOUT ME</p></Link>
 
-                <Link href={"/skill"}><p className="hover:underline cursor-pointer">SKILL</p></Link>
+                <Link href={"/#skill"}><p className="hover:underline cursor-pointer">SKILL</p></Link>
 
                 <Link href={"/project"}><p className="hover:underline cursor-pointer">PROJECT</p></Link>
 
