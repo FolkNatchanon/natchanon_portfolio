@@ -3,28 +3,28 @@
 
 /* Hide scrollbar */
 ::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 @theme {
-  /* Font Family */
-  --font-primary: var(--font-sofia);
+	/* Font Family */
+	--font-primary: var(--font-sofia);
 
-  /* Colors */
-  --color-yellow_cream: #FBF8CC;
-  --color-blue_dark: #03045E;
-  --color-gray_dark: #222222;
+	/* Colors */
+	--color-yellow_cream: #fbf8cc;
+	--color-blue_dark: #03045e;
+	--color-gray_dark: #222222;
 }
 
 @layer base {
-  body {
-    /* Typography */
-    font-family: var(--font-primary);
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--color-black);
+	body {
+		/* Typography */
+		font-family: var(--font-primary);
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--color-black);
 
-    /* Visual */
-    background-color: var(--color-gray_dark);
-  }
+		/* Visual */
+		background-color: var(--color-gray_dark);
+	}
 }

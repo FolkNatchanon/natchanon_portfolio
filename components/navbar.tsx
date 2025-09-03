@@ -1,26 +1,31 @@
 import Link from "next/link"
 
 const NavBar = () => {
-    return (
-        <nav className="flex fixed w-full items-center justify-between backdrop-blur-xs py-5 px-8 bg-black/50 text-white">
+	return (
+		<nav className="fixed flex w-full items-center justify-between bg-black/50 px-8 py-5 text-white backdrop-blur-xs">
+			{/* Left */}
+			<div className="text-[30px] font-bold">
+				<Link href={"/#home"}>
+					<h1 className="cursor-pointer hover:underline">HOME</h1>
+				</Link>
+			</div>
 
+			{/* Right */}
+			<div className="flex items-center gap-[30px] text-[20px]">
+				<Link href={"/about"}>
+					<p className="cursor-pointer hover:underline">ABOUT ME</p>
+				</Link>
 
-            {/* Left */}
-            <div className="text-[30px] font-bold">
-                <Link href={"/#home"}><h1 className="hover:underline cursor-pointer">HOME</h1></Link>
-            </div>
+				<Link href={"/#skill"}>
+					<p className="cursor-pointer hover:underline">SKILL</p>
+				</Link>
 
-            {/* Right */}
-            <div className="flex items-center gap-[30px] text-[20px]">
-                <Link href={"/about"}><p className="hover:underline cursor-pointer">ABOUT ME</p></Link>
-
-                <Link href={"/#skill"}><p className="hover:underline cursor-pointer">SKILL</p></Link>
-
-                <Link href={"/project"}><p className="hover:underline cursor-pointer">PROJECT</p></Link>
-
-            </div>
-        </nav>
-    )
+				<Link href={"/project"}>
+					<p className="cursor-pointer hover:underline">PROJECT</p>
+				</Link>
+			</div>
+		</nav>
+	)
 }
 
 export default NavBar
