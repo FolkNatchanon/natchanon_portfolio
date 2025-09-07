@@ -3,7 +3,7 @@ import DynamicText from "@/components/animation/dynamic-text"
 
 const HomePage = () => {
 	return (
-		<section className="flex w-full flex-col">
+		<section id="home" className="flex w-full flex-col">
 			{/* Title */}
 			<div className="flex h-screen flex-col items-center justify-center">
 				<h1 className="text-[40px] leading-none font-bold">
@@ -12,6 +12,8 @@ const HomePage = () => {
 
 				<DynamicText texts={["SOFTWARE DEVELOPER", "UX/UI DESIGNER"]} />
 			</div>
+
+			<div></div>
 		</section>
 	)
 }
