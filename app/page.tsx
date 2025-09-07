@@ -1,36 +1,50 @@
 const HomePage = () => {
 	return (
-		<div id="home" className="flex w-screen flex-col text-[#088395]">
+		<div id="home" className="bg-blue-dark flex w-screen flex-col text-white">
 			{/* Title */}
 			<div className="item-center flex h-screen w-screen justify-center">
-				<div className="item-center mt-90 flex justify-between gap-40">
-					{/* Left */}
-					<div className="item-center w-full">
-						<div>
-							<p className="text-[40px] font-extrabold text-white">
-								Hello, I am
-							</p>
-						</div>
-						<div className="mt-10">
-							<p className="text-[50px] font-extrabold">Natchanon Srijudanu</p>
+				<div className="item-center mt-90 flex justify-center">
+					<div className="px-4 text-center">
+						<div className="">
+							<h1 className="mb-6 text-4xl md:text-6xl">
+								Hello, I am{" "}
+								<h1 className="text-blue-400"> Natchanon Srijudanu</h1>
+							</h1>
 						</div>
 						<div>
 							<p className="text-[20px]">
-								Computer Science student with an interest in Full-Stack Web
-								Development. Eager to gain real-world experience,
+								Passionate about building innovative web applications with
+								modern technologies.
 								<br />
-								learn from teamwork, and grow into a professional Full-Stack
-								Developer.
+								Currently seeking opportunities to grow and contribute to
+								meaningful projects.
 							</p>
 						</div>
 					</div>
-					{/* Center */}
-					<div className="flex">
-						<div className="mx-2 h-100 border-1 border-white"></div>
+				</div>
+			</div>
+			{/* AboutMe */}
+			<div
+				id="aboutme"
+				className="bg-blue-fade flex h-screen flex-col justify-center p-20"
+			>
+				<div className="flex flex-col items-center justify-center">
+					<div>
+						<h1 className="text-[40px] font-extrabold">About Me</h1>
 					</div>
-					{/* Right */}
-					<div className="item-center w-full">
-						<p className="text-[60px]">Picture</p>
+					<div className="mt-20 flex items-center justify-between text-[24px]">
+						<div className="w-1/2">Picture</div>
+						<div className="flex w-1/2 flex-col gap-2">
+							<p>
+								Hey there! I'm a studying in Bangkok University with a passion
+								for web development. I interest in frontend and backend,
+							</p>
+							<p>
+								enjoying the process of building functional and scalable web
+								applications.
+							</p>
+							<p>With expertise in modern JavaScript frameworks</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -47,10 +61,10 @@ const HomePage = () => {
 							<div className="w-[300px] border-b-[2px] text-white"></div>
 						</div>
 					</div>
-					{/* Programming Language */}
+					{/* Frontend Dev */}
 					<div className="mt-40 flex w-full flex-col items-center">
 						<div>
-							<p className="text-[38px] font-extrabold">Programming Language</p>
+							<p className="text-[38px] font-extrabold">Frontend Development</p>
 						</div>
 						<div className="mt-10 flex items-center gap-20 text-[20px] font-bold">
 							<div className="rounded-[10] border-2 p-3">
@@ -73,7 +87,7 @@ const HomePage = () => {
 					{/* Framework */}
 					<div className="mt-25 flex w-full flex-col items-center">
 						<div>
-							<p className="text-[38px] font-extrabold">Framework</p>
+							<p className="text-[38px] font-extrabold">Backend Developer</p>
 						</div>
 						<div className="mt-10 flex items-center gap-20 text-[20px] font-bold">
 							<div className="rounded-[10] border-2 p-3">

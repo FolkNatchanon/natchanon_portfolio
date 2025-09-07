@@ -12,7 +12,7 @@ const NavBar = () => {
 
 			{/* Right */}
 			<div className="flex items-center gap-[30px] text-[20px]">
-				<Link href={"/about"}>
+				<Link href={"/#aboutme"}>
 					<p className="cursor-pointer hover:underline">ABOUT ME</p>
 				</Link>
 

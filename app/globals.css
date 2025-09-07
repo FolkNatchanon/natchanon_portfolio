@@ -11,9 +11,10 @@
 	--font-primary: var(--font-sofia);
 
 	/* Colors */
-	--color-yellow_cream: #fbf8cc;
-	--color-blue_dark: #03045e;
-	--color-gray_dark: #222222;
+	--color-blue-dark: #1b263b;
+	--color-gray-dark: #222222;
+	--color-white-fade: #dadada;
+	--color-blue-fade: #2C3A53;
 }
 
 @layer base {

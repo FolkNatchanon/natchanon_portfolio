@@ -69,7 +69,9 @@ const TestPage = () => {
 							<Laptop className="text-[#9381ff]" size={24} />
 						</div>
 
-						<h2 className="text-[24px] text-[#f8f7ff] font-semibold">Frontend & UX/UI</h2>
+						<h2 className="text-[24px] font-semibold text-[#f8f7ff]">
+							Frontend & UX/UI
+						</h2>
 					</div>
 
 					<p className="mt-[16px] text-[14px] text-[#DADADA]">
@@ -99,7 +101,9 @@ const TestPage = () => {
 							<Database className="text-[#9381ff]" size={24} />
 						</div>
 
-						<h2 className="text-[24px] text-[#f8f7ff] font-semibold">Backend</h2>
+						<h2 className="text-[24px] font-semibold text-[#f8f7ff]">
+							Backend
+						</h2>
 					</div>
 
 					<p className="mt-[16px] text-[14px] text-[#DADADA]">
