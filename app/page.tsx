@@ -1,8 +1,16 @@
 import DynamicText from "@/components/animation/dynamic-text"
+
+import Link from "next/link"
+import Image from "next/image"
+
 import { FaLaptopCode } from "react-icons/fa"
 import { FaDatabase } from "react-icons/fa"
 import { FaTools } from "react-icons/fa"
-import Image from 'next/image';
+import { FaGithub } from "react-icons/fa"
+import { IoIosMail } from "react-icons/io"
+import { FaInstagram } from "react-icons/fa"
+import { FaFacebook } from "react-icons/fa"
+import { FaLinkedin } from "react-icons/fa"
 
 const HomePage = () => {
 	return (
@@ -10,25 +18,45 @@ const HomePage = () => {
 			{/* Home */}
 			<div
 				id="home"
-				className="flex h-screen flex-col items-center justify-center"
+				className="flex h-screen flex-col items-center justify-center bg-[#84AE92]"
 			>
-				<h1 className="text-[40px] leading-none font-bold">
-					NATCHANON SRIJUDANU
-				</h1>
-
-				<DynamicText texts={["SOFTWARE DEVELOPER", "UX/UI DESIGNER"]} />
+				<h1 className="text-[44px] font-extrabold">NATCHANON SRIJUDANU</h1>
+				<DynamicText texts={["SOFTWARE DEVELOPER"]} />
+				<div className="mt-20 flex items-center justify-center gap-4">
+					<h1 className="text-[18px]">Follow Me:</h1>
+					<Link href="https://github.com/FolkNatchanon">
+						<div className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-black">
+							<FaGithub className="text-[20px] text-white" />
+						</div>
+					</Link>
+					<Link href="https://www.linkedin.com/in/natchanon-srijudanu-412731383/">
+						<div className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-black">
+							<FaLinkedin className="text-[20px] text-white" />
+						</div>
+					</Link>
+					<Link href="https://www.instagram.com/n_t_h_n_n/">
+						<div className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-black">
+							<FaInstagram className="text-[20px] text-white" />
+						</div>
+					</Link>
+					<Link href="https://www.facebook.com/natchanon.srijudanu">
+						<div className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-black">
+							<FaFacebook className="text-[20px] text-white" />
+						</div>
+					</Link>
+				</div>
 			</div>
 			{/* About Me */}
 			<div
 				id="aboutme"
-				className="flex h-screen items-center justify-center bg-gray-200"
+				className="flex h-screen items-center justify-center bg-[#B9D4AA]"
 			>
 				<div className="items-center justify-center">
 					<div className="flex items-center justify-between gap-2">
 						{/* Left */}
 						<div className="flex w-1/2 flex-col gap-6">
 							<div>
-								<h1 className="text-[32px] font-semibold">My Story</h1>
+								<h1 className="text-[32px] font-bold">My Story</h1>
 								<div className="text-[20px]">
 									<p>
 										Hello, my name is Folk. I am currently studying Computer
@@ -47,17 +75,18 @@ const HomePage = () => {
 							</div>
 							<hr className="border-t border-black"></hr>
 							<div>
-								<h2 className="text-[32px] font-semibold">Education</h2>
-								<p className="text-[16px]">
+								<h2 className="text-[32px] font-bold">Education</h2>
+								<p className="text-[18px]">
 									School of Information Technology and Innovation | Bangkok
 									University
 								</p>
-								<p className="text-[16px]">2022 - Present</p>
+								<p className="text-[18px]">2022 - Present</p>
 							</div>
 						</div>
 						{/* Right */}
-						<div className="justify-center items-center">
-							<Image className="rounded-full"
+						<div className="items-center justify-center">
+							<Image
+								className="rounded-full"
 								src="/IMG_6452.jpg"
 								width={300}
 								height={300}
@@ -69,7 +98,7 @@ const HomePage = () => {
 			</div>
 			{/* Skill */}
 			<div id="skill" className="flex flex-col p-10">
-				<div className="mt-30 flex flex-col justify-center gap-24">
+				<div className="mt-20 flex flex-col justify-center gap-24">
 					{/* Title */}
 					<div className="flex flex-col items-center justify-center">
 						<h1 className="text-[40px] font-extrabold">Skills & Tools</h1>

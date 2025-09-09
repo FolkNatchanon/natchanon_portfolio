@@ -3,12 +3,13 @@
 import React, { useState, useEffect } from "react"
 
 interface DynamicTextProps {
-	texts: string[] // Array of texts to cycle through
-	typingSpeed?: number // Milliseconds per character
-	pauseTime?: number // Milliseconds between texts
-	cursorBlinkSpeed?: number // Milliseconds for cursor blinking
-	variant?: "primary" | "secondary" // Variants for text style
-	cursorVariant?: "primary" | "secondary" // Variants for cursor style
+	texts: string[]
+	typingSpeed?: number // ms ต่อ 1 ตัวอักษร
+	pauseTime?: number // ms หลังพิมพ์ครบ 1 ข้อความ
+	cursorBlinkSpeed?: number
+	variant?: "primary" | "secondary"
+	cursorVariant?: "primary" | "secondary"
+	loop?: boolean // พิมพ์จบข้อความสุดท้ายแล้ววนซ้ำไหม (default: false)
 }
 
 const DynamicText: React.FC<DynamicTextProps> = ({
@@ -16,50 +17,49 @@ const DynamicText: React.FC<DynamicTextProps> = ({
 	typingSpeed = 100,
 	pauseTime = 2000,
 	cursorBlinkSpeed = 500,
-	variant = "primary", // Default variant for text
-	cursorVariant = "primary", // Default variant for cursor
+	variant = "primary",
+	cursorVariant = "primary",
+	loop = false,
 }) => {
 	const [currentText, setCurrentText] = useState("")
 	const [textIndex, setTextIndex] = useState(0)
-	const [isDeleting, setIsDeleting] = useState(false)
 	const [showCursor, setShowCursor] = useState(true)
 
-	// Typing effect
+	// พิมพ์อย่างเดียว ไม่ลบ
 	useEffect(() => {
-		const handleTyping = () => {
-			const fullText = texts[textIndex]
-			const nextText = isDeleting
-				? fullText.slice(0, currentText.length - 1)
-				: fullText.slice(0, currentText.length + 1)
+		if (texts.length === 0) return
 
-			setCurrentText(nextText)
+		const fullText = texts[textIndex] ?? ""
 
-			if (!isDeleting && nextText === fullText) {
-				setTimeout(() => setIsDeleting(true), pauseTime)
-			} else if (isDeleting && nextText === "") {
-				setIsDeleting(false)
-				setTextIndex((prevIndex) => (prevIndex + 1) % texts.length)
-			}
+		// ถ้าพิมพ์ครบแล้ว: รอ pause แล้วไปข้อความถัดไป (ถ้ามี/ถ้า loop)
+		if (currentText === fullText) {
+			const doneAll = textIndex === texts.length - 1
+			if (doneAll && !loop) return // จบการทำงาน ไม่วน
+
+			const t = setTimeout(() => {
+				const nextIndex = doneAll ? 0 : textIndex + 1
+				setTextIndex(nextIndex)
+				setCurrentText("") // รีเซ็ตทันที (ไม่ลบทีละตัว)
+			}, pauseTime)
+			return () => clearTimeout(t)
 		}
 
-		const typingInterval = setTimeout(
-			handleTyping,
-			isDeleting ? typingSpeed / 2 : typingSpeed, // Faster deleting
-		)
+		// ยังพิมพ์ไม่ครบ: เติมตัวถัดไป
+		const typingTimer = setTimeout(() => {
+			setCurrentText(fullText.slice(0, currentText.length + 1))
+		}, typingSpeed)
 
-		return () => clearTimeout(typingInterval)
-	}, [currentText, isDeleting, textIndex, texts, typingSpeed, pauseTime])
+		return () => clearTimeout(typingTimer)
+	}, [texts, textIndex, currentText, typingSpeed, pauseTime, loop])
 
-	// Cursor blinking effect
+	// กระพริบเคอร์เซอร์
 	useEffect(() => {
 		const cursorBlinkInterval = setInterval(() => {
 			setShowCursor((prev) => !prev)
 		}, cursorBlinkSpeed)
-
 		return () => clearInterval(cursorBlinkInterval)
 	}, [cursorBlinkSpeed])
 
-	// Variant class mapping
 	const variantClasses: Record<string, string> = {
 		primary:
 			"font-primary text-[16px] text-accent-Black font-semibold xl:text-[20px]",
