@@ -20,7 +20,7 @@ const NavBar = () => {
 					<p className="cursor-pointer hover:underline">SKILL</p>
 				</Link>
 
-				<Link href={"/project"}>
+				<Link href={"/#project"}>
 					<p className="cursor-pointer hover:underline">PROJECT</p>
 				</Link>
 			</div>
