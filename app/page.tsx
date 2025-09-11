@@ -11,13 +11,16 @@ import { IoIosMail } from "react-icons/io"
 import { FaInstagram } from "react-icons/fa"
 import { FaFacebook } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6"
 
 const HomePage = () => {
 	return (
 		<section className="flex w-full flex-col bg-black text-white">
 			{/* Home */}
-			<div id="home" className="flex h-screen flex-col items-center justify-center">
+			<div
+				id="home"
+				className="flex h-screen flex-col items-center justify-center"
+			>
 				<h1 className="text-[44px] font-extrabold">NATCHANON SRIJUDANU</h1>
 				<DynamicText texts={["A passionate full-stack developer"]} />
 				<div className="mt-20 flex items-center justify-center gap-4">
@@ -60,7 +63,7 @@ const HomePage = () => {
 				className="flex h-screen items-center justify-center p-10"
 			>
 				<div className="items-center justify-center">
-					<div className="flex justify-center items-center">
+					<div className="flex items-center justify-center">
 						{/* Left */}
 						<div className="flex w-1/2 flex-col">
 							<div>
@@ -92,7 +95,7 @@ const HomePage = () => {
 							</div>
 						</div>
 						{/* Right */}
-						<div className="flex flex-col items-center justify-center w-1/2">
+						<div className="flex w-1/2 flex-col items-center justify-center">
 							<Image
 								className="rounded-full"
 								src="/IMG_6452.jpg"
@@ -124,16 +127,16 @@ const HomePage = () => {
 								</h2>
 							</div>
 							<div className="mt-6 flex items-center justify-center gap-5 text-[16px]">
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									JavaScript
 								</div>
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									TypeScript
 								</div>
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									Tailwind CSS
 								</div>
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									Next.js
 								</div>
 							</div>
@@ -149,16 +152,16 @@ const HomePage = () => {
 								</h2>
 							</div>
 							<div className="mt-6 flex items-center justify-center gap-5 text-[16px]">
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									Python
 								</div>
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									C#
 								</div>
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									Node.js
 								</div>
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									MySQL
 								</div>
 							</div>
@@ -174,16 +177,16 @@ const HomePage = () => {
 								</h2>
 							</div>
 							<div className="mt-6 flex items-center justify-center gap-5 text-[16px]">
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									Figma
 								</div>
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									Git/Github
 								</div>
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									Rapid Miner
 								</div>
-								<div className="flex h-32 w-32 flex-col items-center justify-center rounded-[10px] p-4 bg-gray-dark transition-transform transform hover:scale-105 hover:shadow-lg">
+								<div className="bg-gray-dark flex h-32 w-32 transform flex-col items-center justify-center rounded-[10px] p-4 transition-transform hover:scale-105 hover:shadow-lg">
 									PowerBI
 								</div>
 							</div>
@@ -192,33 +195,63 @@ const HomePage = () => {
 				</div>
 			</div>
 			{/* Project */}
-			<div id="project" className="h-screen w-screen flex flex-col p-10">
-				<div className="flex flex-col justify-center items-center mt-20">
+			<div id="project" className="flex h-screen w-screen flex-col p-10">
+				<div className="mt-20 flex flex-col items-center justify-center">
 					{/* Title */}
 					<div className="flex flex-col items-center justify-center">
 						<h1 className="text-[40px] font-extrabold">Projects</h1>
 					</div>
 					{/* ProjectList */}
-					<div className="flex items-center justify-center mt-20 gap-8">
-						<div className="bg-gray-dark w-80 h-100 rounded-[20px] flex flex-col items-center p-6 gap-4">
+					<div className="mt-20 flex items-center justify-center gap-8">
+						<div className="bg-gray-dark flex h-100 w-80 transform flex-col items-center gap-4 rounded-[20px] p-5 transition-transform hover:scale-105 hover:shadow-lg">
 							<h1 className="text-[20px] font-semibold">Airtag with ESP32</h1>
-							<p className="">A simplified tracking system was developed using ESP32 devices broadcasting BLE signals. Mobile phones acted as receivers, sending the location data to Firebase, for real-time position tracking.</p>
-							<div className="flex mt-auto gap-6">
-								<div className="bg-white rounded-[10px] text-black items-center justify-center flex px-2">
+							<p className="">
+								A simplified tracking system was developed using ESP32 devices
+								broadcasting BLE signals. Mobile phones acted as receivers,
+								sending the location data to Firebase, for real-time position
+								tracking.
+							</p>
+							<div className="mt-auto flex gap-2">
+								<div className="flex items-center justify-center rounded-[10px] bg-white px-2 text-black">
 									<h1 className="font-extrabold">C#</h1>
 								</div>
-								<div className="bg-white rounded-[10px] text-black  items-center justify-center flex px-2">
+								<div className="flex items-center justify-center rounded-[10px] bg-white px-2 text-black">
 									<h1 className="font-extrabold">ArduinoIDE</h1>
+								</div>
+								<div className="flex items-center justify-center rounded-[10px] bg-white px-2 text-black">
+									<h1 className="font-extrabold">ESP32</h1>
 								</div>
 							</div>
 						</div>
-						<div className="bg-gray-dark w-80 h-100 rounded-[20px] flex flex-col">
-							
+						<div className="bg-gray-dark flex h-100 w-80 transform flex-col items-center justify-center gap-4 rounded-[20px] p-5 transition-transform hover:scale-105 hover:shadow-lg">
+							<h1 className="text-[20px] font-semibold">
+								Basil vs. Holy Basil Classification
+							</h1>
+							<p className="">
+								This project applied deep learning techniques to classify basil
+								leaves (Thai holy basil) and sweet basil, which are visually
+								similar but have distinct culinary uses. A CNN model was trained
+								on an image dataset with enhancements such as data augmentation,
+								dropout layers, and early stopping to improve generalization and
+								accuracy. The goal was to demonstrate how AI can be used in
+								agriculture and food industries for plant identification.
+							</p>
+							<div className="mt-auto flex gap-2">
+								<div className="flex items-center justify-center rounded-[10px] bg-white px-2 text-black">
+									<h1 className="font-extrabold">Python</h1>
+								</div>
+								<div className="flex items-center justify-center rounded-[10px] bg-white px-2 text-black">
+									<h1 className="font-extrabold">TensorFlow</h1>
+								</div>
+								<div className="flex items-center justify-center rounded-[10px] bg-white px-2 text-black">
+									<h1 className="font-extrabold">NumPy</h1>
+								</div>
+								<div className="flex items-center justify-center rounded-[10px] bg-white px-2 text-black">
+									<h1 className="font-extrabold">Matplotlib</h1>
+								</div>
+							</div>
 						</div>
-						<div className="bg-gray-dark w-80 h-100 rounded-[20px] flex flex-col">
-							
-						</div>
-
+						<div className="bg-gray-dark flex h-100 w-80 flex-col rounded-[20px]"></div>
 					</div>
 				</div>
 			</div>
