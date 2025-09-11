@@ -98,9 +98,9 @@ const HomePage = () => {
 						<div className="flex w-1/2 flex-col items-center justify-center">
 							<Image
 								className="rounded-full"
-								src="/IMG_6452.jpg"
-								width={300}
-								height={300}
+								src="/profile.jpg"
+								width={500}
+								height={500}
 								alt="Profile"
 							/>
 						</div>
